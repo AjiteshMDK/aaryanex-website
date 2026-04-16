@@ -1,52 +1,85 @@
-export default function AaryanexWebsite() {
+export default function Home() {
   const services = [
-    "IT Consulting",
-    "Software Development",
     "SAP Mobility Solutions",
+    "Enterprise Software Development",
+    "IT Consulting",
     "Cloud Integration",
-    "Enterprise Architecture",
+    "Architecture Modernization",
+    "AI & Automation",
   ];
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white font-sans">
-      <header className="border-b border-gray-800 backdrop-blur-sm sticky top-0 bg-gray-950/90 z-10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
-              <span className="text-xl font-bold">A</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-semibold">Aaryanex Technology</h1>
-              <p className="text-sm text-gray-400">SAP Mobility</p>
-            </div>
+    <div className="min-h-screen bg-black text-white">
+      {/* Navbar */}
+      <header className="border-b border-white/10 sticky top-0 backdrop-blur-md bg-black/70 z-10">
+        <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+          <div>
+            <h1 className="text-xl font-bold">Aaryanex Technology</h1>
+            <p className="text-sm text-gray-400">SAP Mobility</p>
           </div>
+          <button className="px-5 py-2 rounded-xl bg-white text-black font-medium">
+            Contact Us
+          </button>
         </div>
       </header>
 
-      <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-10 items-center">
+      {/* Hero */}
+      <section className="max-w-7xl mx-auto px-8 py-28 grid md:grid-cols-2 gap-14 items-center">
         <div>
-          <h2 className="text-5xl font-bold leading-tight mb-6">
-            Building Smart Enterprise Software for the Future
-          </h2>
-          <p className="text-gray-400 text-lg leading-8">
-            We help businesses accelerate digital transformation through modern
-            software development, IT consulting, and SAP mobility solutions.
+          <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
+            Enterprise IT Solutions
           </p>
+          <h2 className="text-6xl font-bold leading-tight mb-6">
+            Accelerate Digital Transformation with SAP Mobility
+          </h2>
+          <p className="text-gray-400 text-lg leading-8 mb-8">
+            We help enterprises modernize operations through intelligent
+            software solutions, SAP mobility platforms, and strategic IT consulting.
+          </p>
+          <div className="flex gap-4">
+            <button className="px-6 py-3 rounded-2xl bg-white text-black font-medium">
+              Book Consultation
+            </button>
+            <button className="px-6 py-3 rounded-2xl border border-white/20">
+              Explore Services
+            </button>
+          </div>
         </div>
 
-        <div className="bg-gray-900 rounded-3xl p-8 border border-gray-800">
-          <div className="grid grid-cols-2 gap-4">
-            {services.map((service, idx) => (
-              <div
-                key={idx}
-                className="p-5 rounded-2xl bg-gray-800 border border-gray-700"
-              >
-                {service}
-              </div>
-            ))}
+        <div className="grid grid-cols-2 gap-5">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md"
+            >
+              {service}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why Us */}
+      <section className="max-w-7xl mx-auto px-8 py-20">
+        <h3 className="text-4xl font-semibold mb-10">Why Choose Us</h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="p-6 rounded-3xl bg-white/5 border border-white/10">
+            Enterprise-grade Architecture
+          </div>
+          <div className="p-6 rounded-3xl bg-white/5 border border-white/10">
+            Faster Delivery Cycles
+          </div>
+          <div className="p-6 rounded-3xl bg-white/5 border border-white/10">
+            SAP Domain Expertise
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 mt-16">
+        <div className="max-w-7xl mx-auto px-8 py-8 text-gray-400">
+          © 2026 Aaryanex Technology · Enterprise IT Consulting
+        </div>
+      </footer>
     </div>
   );
 }
