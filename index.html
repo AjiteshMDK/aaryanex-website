@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AARYANEX Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#04060c;color:#fff;scroll-behavior:smooth}
+
+header{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(12px);padding:15px 50px;display:flex;justify-content:space-between;align-items:center;z-index:1000}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:45px}
+nav a{color:#fff;margin-left:25px;text-decoration:none;font-weight:500;position:relative}
+nav a::after{content:"";position:absolute;width:0;height:2px;background:#00d4ff;left:0;bottom:-6px;transition:.3s}
+nav a:hover::after{width:100%}
+
+.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:radial-gradient(circle at top,#0a1f3c,#000)}
+.hero img{height:100px;margin-bottom:20px;animation:float 4s ease-in-out infinite}
+.hero h1{font-size:3.5rem;background:linear-gradient(90deg,#00d4ff,#4facfe);-webkit-background-clip:text;color:transparent}
+.hero p{color:#bbb;margin:20px 0}
+.btn{padding:14px 32px;border:none;border-radius:30px;background:linear-gradient(90deg,#00d4ff,#4facfe);color:#000;font-weight:600;cursor:pointer;transition:.3s}
+.btn:hover{transform:scale(1.05)}
+
+section{padding:100px 50px;text-align:center}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:50px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);padding:30px;border-radius:20px;transition:.4s}
+.card:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 20px 50px rgba(0,212,255,0.2)}
+
+.contact-container{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:50px;text-align:left}
+.contact-info p{margin:10px 0;color:#ccc}
+.contact-info a{color:#00d4ff;text-decoration:none}
+
+form input,form textarea{width:100%;padding:14px;margin-bottom:15px;border:none;border-radius:10px;background:#0c111b;color:#fff}
+form input:focus,form textarea:focus{outline:1px solid #00d4ff}
+
+iframe{width:100%;height:300px;border:none;border-radius:12px;margin-top:15px}
+
+footer{text-align:center;padding:25px;background:#000;color:#777}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+}
+
+@media(max-width:768px){
+.contact-container{grid-template-columns:1fr}
+.hero h1{font-size:2.3rem}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png">
+    <strong>AARYANEX</strong>
+  </div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <img src="logo.png">
+    <h1>Future-Ready Technology Solutions</h1>
+    <p>We build scalable, high-performance digital systems for modern businesses.</p>
+    <button class="btn" onclick="scrollToContact()">Contact Us</button>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Expertise</h2>
+  <div class="services">
+    <div class="card"><h3>Web Platforms</h3><p>High-end responsive and scalable web apps.</p></div>
+    <div class="card"><h3>Cloud Engineering</h3><p>Secure and optimized cloud architectures.</p></div>
+    <div class="card"><h3>AI Solutions</h3><p>Automation and intelligence for business growth.</p></div>
+    <div class="card"><h3>Enterprise Consulting</h3><p>End-to-end digital transformation strategy.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a href="tel:+918867843591">+91 8867843591</a></p>
+      <p><strong>Email:</strong> <a href="mailto:ajitesh90@gmail.com">ajitesh90@gmail.com</a></p>
+      <p><strong>Address:</strong><br>
+      Plot No-200/2888,<br>
+      Brundabati Vihar, Nuasahi,<br>
+      Balia, Balasore, Odisha - 756056, India</p>
+
+      <iframe src="https://maps.google.com/maps?q=Balasore%20Odisha&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+
+    <div>
+      <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button class="btn">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 AARYANEX Technology. All rights reserved.</p>
+</footer>
+
+<script>
+function scrollToContact(){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+
+function sendMessage(e){
+  e.preventDefault();
+  alert('Message sent! (Demo mode)');
+}
+</script>
+
+</body>
+</html>
